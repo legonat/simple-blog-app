@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "cdc3247e-b068-4cde-9078-8def167dce53",
+		"name": "RentaTeamBlog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/get_posts/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/get_posts/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/insert_post/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Conte",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"Put Test\",\n\"text\": \"Put Text\",\n\"tags\":[\n    \"put\", \"test\", \"Info\"\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/insert_post/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"insert_post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/generate_random/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Conte",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/generate_random/?count=30",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"generate_random",
+						""
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get_posts/?tag",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/get_posts/?tag=lorem",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get_posts",
+						""
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "lorem"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
